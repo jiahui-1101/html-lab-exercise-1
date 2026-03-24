@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Contact page of Wong Jia Hui's personal portfolio website">
+	<title>Contact Me - Wong Jia Hui</title>
+</head>
+<body>
+	<header>
+		<h1>Contact Me</h1>
+		<p>Feel free to send me a message using the form below.</p>
+	</header>
+	<nav>
+		<ul> 
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About Me</a></li>
+			<li><a href="academic.html">Academic Record</a></li>
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="skills.html">Skills</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+	<main>
+		<section>
+			<h2 style="color: darkblue; font-size: 28px;">Send Me a Message</h2>
+			<p style="background-color: #f0f8ff; padding: 8px;">Please fill in the form below to get in touch with me.</p>
+
+			<form action="#" method="post" style="background-color: #eef6ff; border: 2px solid navy; padding: 15px;">
+				<fieldset style="border: 2px solid gray; padding: 12px;">
+					<legend style="color: darkred; font-size: 18px;">Your Contact Details</legend>
+					<label for="fullname">Full Name:</label><br>
+					<input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required maxlength="60" style="border: 2px solid navy; padding: 6px; font-size: 14px;"><br><br>
+					
+					<label for="email">Email Address:</label><br>
+					<input type="email" id="email" name="email" placeholder="example@email.com" required style="border: 2px solid green; padding: 6px; font-size: 14px;"><br><br>
+
+					<label for="phone">Phone Number:</label><br>
+					<input type="tel" id="phone" name="phone" placeholder="012-3456789" required style="border: 2px solid purple; padding: 6px; font-size: 14px;"><br><br>
+
+					<label for="age">Age:</label><br>
+					<input type="number" id="age" name="age" min="18" max="100" placeholder="Enter your age" style="border: 2px solid orange; padding: 6px; font-size: 14px;"><br><br>
+
+					<label for="contactdate">Preferred Contact Date:</label><br>
+					<input type="date" id="contactdate" name="contactdate" required style="border: 2px solid teal; padding: 6px; font-size: 14px;"><br><br>
+
+					<label for="urgency">Urgency Level (1 to 10):</label><br>
+					<input type="range" id="urgency" name="urgency" min="1" max="10"><br><br>
+
+					<label for="subject">Subject:</label><br>
+					<select id="subject" name="subject" required style="border: 2px solid brown; padding: 6px; font-size: 14px;">
+						<optgroup label="Academic">
+							<option value="assignment">Assignment Discussion</option>
+							<option value="project">Project Collaboration</option>
+						</optgroup>
+						<optgroup label="General">
+							<option value="feedback">Feedback</option>
+							<option value="other">Other Enquiry</option>
+						</optgroup>
+					</select><br><br>
+
+					<p>Services Interested In:</p>
+					<input type="checkbox" id="webdev" name="service[]" value="webdev">
+					<label for="webdev">Web Development</label><br>
+					<input type="checkbox" id="mobileapp" name="service[]" value="mobileapp">
+					<label for="mobileapp">Mobile App Development</label><br>
+					<input type="checkbox" id="uiux" name="service[]" value="uiux">
+					<label for="uiux">UI/UX Design</label><br><br>
+
+					<p>Preferred Contact Method:</p>
+					<input type="radio" id="contact-email" name="contactmethod" value="email" required>
+					<label for="contact-email">Email</label><br>
+					<input type="radio" id="contact-phone" name="contactmethod" value="phone">
+					<label for="contact-phone">Phone Call</label><br>
+					<input type="radio" id="contact-whatsapp" name="contactmethod" value="whatsapp">
+					<label for="contact-whatsapp">WhatsApp</label><br><br>
+
+					<label for="message">Message:</label><br>
+					<textarea id="message" name="message" rows="6" cols="40" placeholder="Write your message here" maxlength="300" required style="border: 2px solid black; padding: 8px; font-size: 14px;"></textarea><br><br>
+
+					<button type="submit" style="background-color: navy; color: white; padding: 8px; border: 1px solid black; font-size: 14px;">Submit</button>
+					<button type="reset" style="background-color: lightgray; color: black; padding: 8px; border: 1px solid black; font-size: 14px;">Reset</button>
+				</fieldset>
+				<br>
+			</form>
+		</section>
+		<section>
+			<h2>Other Contact Information</h2>
+			<p>You may also reach me through email for academic discussions, project collaboration, or general enquiries.</p>
+		</section>
+	</main>
+	<footer>
+		<address>
+			Email: wongjia.hui@graduate.utm.my<br>
+			Phone: 017-4662286
+		</address>
+		<p><small>&copy; 2026 Wong Jia Hui. All rights reserved.</small></p>
+	</footer>
+</body>
+</html>
