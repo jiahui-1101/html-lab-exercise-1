@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Projects page of Wong Jia Hui's personal portfolio website">
+	<title>Projects - Wong Jia Hui</title>
+</head>
+<body>
+	<header>
+		<h1>My Projects</h1>
+		<p>This page presents my profile photo and one of my project screenshots using semantic HTML image elements.</p>
+	</header>
+	<nav>
+		<ul> 
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About Me</a></li>
+			<li><a href="academic.html">Academic Record</a></li>
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="skills.html">Skills</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+	<main>
+		<section>
+			<h2>Profile Photo</h2>
+			<figure>
+				<img src="images/profile.jpg" alt="Portrait photo of Wong Jia Hui smiling at the camera" width="250" height="300" title="This is my profile photo">
+				<figcaption>Figure 1: My profile photo for the portfolio website.</figcaption>
+			</figure>
+		</section>
+		<section>
+			<h2>Project Screenshot</h2>
+			<!--The align attribute is deprecated in HTML. In modern web development, CSS should be used instead to control image alignment.-->
+			<figure>
+				<a href="https://github.com/jiahui-1101/CodeNection" target="_blank"><img src="images/project.jpg" alt="Screenshot of my software project interface showing the main dashboard" width="400" height="250" align="left"></a>
+				<figcaption>
+					Figure 2: Screenshot of one of my software projects. Click the image to open a related URL.
+				</figcaption>
+			</figure>
+			<p>This screenshot shows one of the projects I have worked on. The image is aligned beside this paragraph
+			using a deprecated HTML attribute for learning purposes only.</p>
+		</section>
+	</main>
+	<footer>
+		<address>
+			Email: wongjia.hui@graduate.utm.my<br>
+			Phone: 017-4662286
+		</address>
+		<p><small>&copy; 2026 Wong Jia Hui. All rights reserved.</small></p>
+	</footer>
+</body>
+</html>
