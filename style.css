@@ -20,7 +20,6 @@
 
   --color-surface: #f5f4f0;
   --color-surface-2: #ffffff;
-
   --color-border: #d9d9d9;
 
   /* ===== Fonts ===== */
@@ -87,16 +86,20 @@ p {
 
 small {
   font-size: 1.2rem;
+  line-height: 1.5;
   color: var(--color-muted);
 }
 
 blockquote {
   font-size: 1.8rem;
+  line-height: 1.7;
   color: var(--color-secondary);
 }
 
-code, caption {
+code,
+caption {
   font-size: 1.4rem;
+  line-height: 1.5;
   color: var(--color-muted);
 }
 
@@ -122,4 +125,176 @@ main {
 footer {
   background-color: var(--color-secondary);
   color: white;
+}
+
+
+/* ===== Task 2: Typography & Spacing ===== */
+header h1 {
+  margin-bottom: var(--space-sm);
+}
+
+header p {
+  margin-top: 0;
+}
+
+main section {
+  margin-bottom: var(--space-lg);
+}
+
+main h2,
+main h3,
+main h4 {
+  margin-bottom: var(--space-sm);
+}
+
+main p {
+  margin-bottom: var(--space-md);
+}
+
+/* ===== Task 2: Box Model for Page Areas ===== */
+header {
+  padding: var(--space-lg);
+  border-bottom: 0.2rem solid var(--color-border);
+  /* padding creates inner space so the header content can breathe */
+}
+
+nav {
+  padding: var(--space-md);
+  margin-bottom: var(--space-lg);
+  border-bottom: 0.2rem solid var(--color-accent);
+  /* margin separates nav from the main content below */
+}
+
+main {
+  padding: var(--space-lg);
+  /* padding keeps the main content away from the edges */
+}
+
+footer {
+  padding: var(--space-lg);
+  margin-top: var(--space-lg);
+  /* margin pushes the footer away from the content above */
+}
+
+/* ===== Task 2: Link States ===== */
+a:link {
+  color: var(--color-accent-2);
+}
+
+a:visited {
+  color: var(--color-secondary);
+}
+
+a:hover {
+  color: var(--color-accent-2);
+}
+
+a:active {
+  color: var(--color-primary);
+}
+
+nav a:link,
+nav a:visited {
+  color: var(--color-surface-2);
+}
+
+nav a:hover {
+  color: var(--color-primary);
+  background-color: var(--color-accent);
+}
+
+nav a:active {
+  color: var(--color-surface-2);
+  background-color: var(--color-secondary);
+}
+
+/* ===== Card Style (Panel) ===== */
+main section {
+  background-color: var(--color-surface-2);
+  padding: var(--space-md); /* padding creates space inside each content panel */
+  margin-bottom: var(--space-lg); /* margin separates one section card from the next */
+  border: 0.1rem solid var(--color-border); /* border defines the edge of the card */
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
+}
+
+nav a {
+  border-radius: 0.6rem;
+  padding: 0.6rem 1rem;
+}
+
+button {
+  border-radius: 0.6rem;
+  padding: 0.8rem 1.2rem;
+}
+
+input,
+textarea,
+select {
+  border-radius: 0.6rem;
+  border: 1px solid var(--color-border);
+  padding: 0.8rem;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===== Task 2: Buttons ===== */
+button {
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  background-color: var(--color-primary);
+  color: var(--color-surface-2);
+  border: none;
+  cursor: pointer;
+  margin-right: var(--space-sm);
+  /* margin creates space between the submit and reset buttons */
+}
+
+button:hover {
+  background-color: var(--color-accent-2);
+}
+
+button:active {
+  background-color: var(--color-secondary);
+}
+
+/* ===== Task 2: Form Element Basics ===== */
+input,
+textarea,
+select {
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  margin-bottom: var(--space-sm);
+  /* padding gives inner space for easier typing */
+  /* border defines the edge of the form field */
+}
+
+label {
+  display: inline-block;
+  margin-bottom: var(--space-sm);
+}
+
+fieldset {
+  border: 0.1rem solid var(--color-border);
+  padding: var(--space-md);
+  border-radius: 1rem;
+  /* border outlines the grouped form area */
+  /* padding keeps the form controls away from the fieldset edge */
+}
+
+legend {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  padding: 0 var(--space-sm);
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.3rem rgba(192, 132, 87, 0.25);
 }
