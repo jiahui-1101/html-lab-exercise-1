@@ -315,6 +315,7 @@ select:focus {
   font-family: var(--font-heading);
   font-size: 2rem;
   color: var(--color-surface-2);
+  font-weight: 700;
 }
 
 .nav-links {
@@ -364,4 +365,26 @@ select:focus {
   max-width: 28rem;
   border-radius: 1rem;
   border: 0.2rem solid var(--color-border);
+}
+
+/* ===== Task 3: Hero Alignment ===== */
+.hero-text {
+  text-align: center;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 600px) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
 }
