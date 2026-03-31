@@ -388,3 +388,43 @@ select:focus {
     text-align: left;
   }
 }
+
+/* ===== Task 4: Card Grid on index.html ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-md);
+}
+
+.card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: var(--space-sm);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.featured-card {
+  grid-column: span 2;
+}
+
+/* ===== Task 4: Sidebar Layout ===== */
+.sidebar-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.main-content,
+.sidebar {
+  min-height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .sidebar-layout {
+    grid-template-columns: 1fr 280px;
+  }
+}
