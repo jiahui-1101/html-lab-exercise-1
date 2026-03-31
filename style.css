@@ -427,4 +427,56 @@ select:focus {
   .sidebar-layout {
     grid-template-columns: 1fr 280px;
   }
+
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .featured-card {
+    grid-column: span 2;
+  }
+}
+
+/* ===== Task 5: Mobile-First Responsive Layout ===== */
+.nav-links {
+  flex-direction: column;
+  width: 100%;
+}
+
+.nav-links li {
+  width: 100%;
+}
+
+.nav-links a {
+  width: 100%;
+}
+
+.card-grid {
+  grid-template-columns: 1fr;
+}
+
+.featured-card {
+  grid-column: span 1;
+}
+
+@media (min-width: 600px) {
+  .nav-links {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .nav-links li,
+  .nav-links a {
+    width: auto;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
