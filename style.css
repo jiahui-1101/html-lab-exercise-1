@@ -480,3 +480,76 @@ select:focus {
     align-items: center;
   }
 }
+
+/* ===== Task 6: Form Styling ===== */
+form {
+  display: grid;
+  gap: var(--space-md);
+}
+
+fieldset {
+  background-color: var(--color-surface-2);
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  background-color: var(--color-surface-2);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 14rem;
+}
+
+button[type="submit"],
+button[type="reset"] {
+  min-width: 10rem;
+}
+
+/* ===== Task 6: Pseudo-elements ===== */
+main h2::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 0.3rem;
+  background-color: var(--color-accent-2);
+  margin-top: var(--space-sm);
+}
+
+.site-logo::before {
+  content: "★ ";
+  color: var(--color-accent);
+}
+
+/* ===== Task 6: Table Styling ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: var(--space-sm);
+  border: 1px solid var(--color-border);
+  text-align: left;
+}
+
+/* alternating row colors */
+tbody tr:nth-child(even) {
+  background-color: var(--color-surface);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--color-surface-2);
+}
+
+/* first column emphasis */
+td:first-child {
+  font-weight: 600;
+}
+
+/* last row emphasis */
+tbody tr:last-child {
+  border-bottom: 0.3rem solid var(--color-accent-2);
+}
