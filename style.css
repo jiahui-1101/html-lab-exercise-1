@@ -21,6 +21,10 @@
   --color-surface: #f5f4f0;
   --color-surface-2: #ffffff;
   --color-border: #d9d9d9;
+  --color-white: #ffffff;
+
+  --shadow-soft: 0 0.4rem 1.2rem rgba(26, 26, 26, 0.08);
+  --focus-ring: 0 0 0 0.3rem rgba(192, 132, 87, 0.25);
 
   /* ===== Fonts ===== */
   --font-body: 'Lora', Georgia, serif;
@@ -124,7 +128,7 @@ main {
 
 footer {
   background-color: var(--color-secondary);
-  color: white;
+  color: var(--color-white);
 }
 
 
@@ -215,7 +219,7 @@ main section {
   margin-bottom: var(--space-lg); /* margin separates one section card from the next */
   border: 0.1rem solid var(--color-border); /* border defines the edge of the card */
   border-radius: 1rem;
-  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-soft);
 }
 
 nav a {
@@ -249,7 +253,9 @@ button {
   border: none;
   cursor: pointer;
   margin-right: var(--space-sm);
-  /* margin creates space between the submit and reset buttons */
+  border-radius: 0.6rem;
+  padding: 0.8rem 1.2rem;
+  transition: background-color 0.2s, transform 0.2s;
 }
 
 button:hover {
@@ -258,6 +264,7 @@ button:hover {
 
 button:active {
   background-color: var(--color-secondary);
+  transform: scale(0.97);
 }
 
 /* ===== Task 2: Form Element Basics ===== */
@@ -296,7 +303,7 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  box-shadow: 0 0 0 0.3rem rgba(192, 132, 87, 0.25);
+  box-shadow: var(--focus-ring);
 }
 
 /* ===== Task 3: Navigation with Flexbox ===== */
@@ -348,6 +355,7 @@ select:focus {
 .hero {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   gap: var(--space-lg);
 }
@@ -362,7 +370,7 @@ select:focus {
 
 .hero-image img {
   width: 100%;
-  max-width: 28rem;
+  max-width: 10rem;
   border-radius: 1rem;
   border: 0.2rem solid var(--color-border);
 }
@@ -374,7 +382,7 @@ select:focus {
 
 .hero-image {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 @media (min-width: 600px) {
@@ -451,10 +459,6 @@ select:focus {
   width: 100%;
 }
 
-.card-grid {
-  grid-template-columns: 1fr;
-}
-
 .featured-card {
   grid-column: span 1;
 }
@@ -491,7 +495,11 @@ fieldset {
   background-color: var(--color-surface-2);
 }
 
-input,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
 textarea,
 select {
   width: 100%;
@@ -552,4 +560,117 @@ td:first-child {
 /* last row emphasis */
 tbody tr:last-child {
   border-bottom: 0.3rem solid var(--color-accent-2);
+}
+
+.skills-nav {
+  background-color: var(--color-surface-2);
+  padding: var(--space-md);
+  border: 0.1rem solid var(--color-border);
+  border-radius: 1rem;
+  margin: 0 var(--space-lg) var(--space-lg);
+}
+
+.skills-nav ul li,
+#technologies ul li,
+#top-skills li,
+#learning-priority li {
+  padding: 0.8rem 0;
+  border-top: 0.1rem solid var(--color-border);
+  border-bottom: 0.1rem solid var(--color-border);
+}
+
+.skills-nav ul li:first-child,
+#technologies ul li:first-child,
+#top-skills li:first-child,
+#learning-priority li:first-child {
+  border-top: none;
+}
+
+.skills-nav ul li:last-child,
+#technologies ul li:last-child,
+#top-skills li:last-child,
+#learning-priority li:last-child {
+  border-bottom: none;
+}
+
+.skills-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  list-style: none;
+  padding: 0;
+}
+
+.skills-nav ul li a {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: 0.1rem solid var(--color-border);
+  border-radius: 0.6rem;
+  padding: 0.8rem 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.skills-nav ul li a:hover {
+  background-color: var(--color-accent-2); 
+  color: var(--color-white);
+  transform: translateY(-2px); 
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.project-card {
+  background-color: var(--color-surface-2);
+  padding: var(--space-md);
+  border: 0.1rem solid var(--color-border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 0.8rem;
+}
+
+@media (min-width: 600px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.option-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.option-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0;
+}
+
+.option-group input[type="checkbox"],
+.option-group input[type="radio"] {
+  width: auto;
+  margin-bottom: 0;
+}
+
+form label,
+form select,
+form textarea {
+  display: block;
+  width: 100%;
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"] {
+  width: auto;
+  display: inline-block;
 }

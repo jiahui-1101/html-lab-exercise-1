@@ -37,25 +37,25 @@
 			<form action="#" method="post">
 				<fieldset>
 					<legend>Your Contact Details</legend>
-					<label for="fullname">Full Name:</label><br>
-					<input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required maxlength="60"><br><br>
+					<label for="fullname">Full Name:</label>
+					<input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required maxlength="60">
 					
-					<label for="email">Email Address:</label><br>
-					<input type="email" id="email" name="email" placeholder="example@email.com" required><br><br>
+					<label for="email">Email Address:</label>
+					<input type="email" id="email" name="email" placeholder="example@email.com" required>
 
-					<label for="phone">Phone Number:</label><br>
-					<input type="tel" id="phone" name="phone" placeholder="012-3456789" required><br><br>
+					<label for="phone">Phone Number:</label>
+					<input type="tel" id="phone" name="phone" placeholder="012-3456789" required>
 
-					<label for="age">Age:</label><br>
-					<input type="number" id="age" name="age" min="18" max="100" placeholder="Enter your age"><br><br>
+					<label for="age">Age:</label>
+					<input type="number" id="age" name="age" min="18" max="100" placeholder="Enter your age">
 
-					<label for="contactdate">Preferred Contact Date:</label><br>
-					<input type="date" id="contactdate" name="contactdate" required><br><br>
+					<label for="contactdate">Preferred Contact Date:</label>
+					<input type="date" id="contactdate" name="contactdate" required>
 
-					<label for="urgency">Urgency Level (1 to 10):</label><br>
-					<input type="range" id="urgency" name="urgency" min="1" max="10"><br><br>
+					<label for="urgency">Urgency Level (1 to 10):</label>
+					<input type="range" id="urgency" name="urgency" min="1" max="10">
 
-					<label for="subject">Subject:</label><br>
+					<label for="subject">Subject:</label>
 					<select id="subject" name="subject" required>
 						<optgroup label="Academic">
 							<option value="assignment">Assignment Discussion</option>
@@ -65,31 +65,28 @@
 							<option value="feedback">Feedback</option>
 							<option value="other">Other Enquiry</option>
 						</optgroup>
-					</select><br><br>
+					</select>
 
-					<p>Services Interested In:</p>
-					<input type="checkbox" id="webdev" name="service[]" value="webdev">
-					<label for="webdev">Web Development</label><br>
-					<input type="checkbox" id="mobileapp" name="service[]" value="mobileapp">
-					<label for="mobileapp">Mobile App Development</label><br>
-					<input type="checkbox" id="uiux" name="service[]" value="uiux">
-					<label for="uiux">UI/UX Design</label><br><br>
+					<label>Services Interested In:</label>
+						<div class="option-group">
+							<label><input type="checkbox" name="service[]" value="webdev"> Web Development</label>
+							<label><input type="checkbox" name="service[]" value="mobileapp"> Mobile App Development</label>
+							<label><input type="checkbox" name="service[]" value="uiux"> UI/UX Design</label>
+						</div>
 
-					<p>Preferred Contact Method:</p>
-					<input type="radio" id="contact-email" name="contactmethod" value="email" required>
-					<label for="contact-email">Email</label><br>
-					<input type="radio" id="contact-phone" name="contactmethod" value="phone">
-					<label for="contact-phone">Phone Call</label><br>
-					<input type="radio" id="contact-whatsapp" name="contactmethod" value="whatsapp">
-					<label for="contact-whatsapp">WhatsApp</label><br><br>
+					<label>Preferred Contact Method:</label>
+						<div class="option-group">
+							<label><input type="radio" name="contactmethod" value="email" required> Email</label>
+							<label><input type="radio" name="contactmethod" value="phone"> Phone Call</label>
+							<label><input type="radio" name="contactmethod" value="whatsapp"> WhatsApp Message</label>
+						</div>
 
-					<label for="message">Message:</label><br>
-					<textarea id="message" name="message" rows="6" cols="40" placeholder="Write your message here" maxlength="300" required></textarea><br><br>
+					<label for="message">Message:</label>
+					<textarea id="message" name="message" rows="6" cols="40" placeholder="Write your message here" maxlength="300" required></textarea>
 
 					<button type="submit">Submit</button>
 					<button type="reset">Reset</button>
 				</fieldset>
-				<br>
 			</form>
 		</section>
 		<section>

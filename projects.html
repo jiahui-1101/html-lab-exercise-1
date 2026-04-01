@@ -30,28 +30,24 @@
   		</ul>
 	</nav>
 	<main>
-		<section>
-			<h2>Profile Photo</h2>
-			<figure>
-				<img src="images/profile.jpg" alt="Portrait photo of Wong Jia Hui smiling at the camera" width="250" height="300" title="This is my profile photo">
-				<figcaption>Figure 1: My profile photo for the portfolio website.</figcaption>
-			</figure>
-		</section>
-		<section>
-			<h2>Project Screenshot</h2>
-			<!-- The align attribute is deprecated in HTML.
-     			In modern web development, CSS should be used instead for layout and image alignment. -->
-			<figure>
-				<a href="https://github.com/jiahui-1101/CodeNection" target="_blank" rel="noopener noreferrer">
-					<img src="images/project.jpg" alt="Screenshot of my software project interface showing the main dashboard" width="400" height="250">
-				</a>
-				<figcaption>
-					Figure 2: Screenshot of one of my software projects. Click the image to open a related URL.
-				</figcaption>
-			</figure>
-			<p>This screenshot shows one of the projects I have worked on. The image is aligned beside this paragraph
-			using a deprecated HTML attribute for learning purposes only.</p>
-		</section>
+  			<section>
+    			<h2>Project Gallery</h2>
+    			<div class="project-grid">
+      			<figure class="project-card">
+        			<img src="images/profile.jpg" alt="Portrait photo of Wong Jia Hui smiling at the camera" width="250" height="300" title="This is my profile photo">
+        			<figcaption>Figure 1: My profile photo for the portfolio website.</figcaption>
+      			</figure>
+
+      			<figure class="project-card">
+        			<a href="https://github.com/jiahui-1101/CodeNection" target="_blank" rel="noopener noreferrer">
+          				<img src="images/project.jpg" alt="Screenshot of my software project interface showing the main dashboard" width="400" height="250">
+        			</a>
+        			<figcaption>Figure 2: Screenshot of one of my software projects. Click the image to open a related URL.</figcaption>
+      			</figure>
+    			</div>
+
+    			<p>This gallery shows images related to my portfolio and software project work.</p>
+  			</section>
 	</main>
 	<footer>
 		<address>
